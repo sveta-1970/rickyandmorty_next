@@ -4,13 +4,15 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
+      <div>Main page</div>
+      <div className={styles.banner}>
+        
         <Image
-          src="/vercel.svg"
-          alt="Vercel Logo"
-          className={styles.vercelLogo}
-          width={100}
-          height={24}
+          src="/rick-and-morty2_1.png"
+          alt="Logo"
+          className={styles.logo}
+          width={300}
+          height={200}
           priority
         />
       </div>
