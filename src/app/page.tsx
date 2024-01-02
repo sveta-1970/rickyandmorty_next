@@ -1,20 +1,22 @@
 import Image from "next/image";
+import Input from "@/components/Input/Input"
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.banner}>
-        
         <Image
           src="/rick-and-morty2_1.png"
-          alt="Logo"
-          className={styles.logo}
+          alt="main image"
+          className={styles.mainImage}
           width={270}
           height={210}
           priority
         />
       </div>
+
+      <Input />
 
       <div className={styles.footer}>
         <a
