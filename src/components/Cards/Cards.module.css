@@ -30,3 +30,13 @@
 .description{
   font-size: 16px;
 }
+
+.button{
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: button ease-in-out .4s;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 7px 10px;
+}

@@ -9,7 +9,6 @@ export default async function fetchCharacters() {
     const data: IFetchResult = await req(
       "https://rickandmortyapi.com/api/character"
     );
-    console.log(data);
     return (
       <main>
         <h1>Characters</h1>
