@@ -6,8 +6,8 @@ type ButtonProps = {
  onClick: MouseEventHandler;
 }
 
-function ButtonWithCards({ buttonText, onClick }: ButtonProps) {
+function Button({ buttonText, onClick }: ButtonProps) {
   return <button className={styles.button} onClick={onClick}>{buttonText}</button>
 }
 
-export default ButtonWithCards;
+export default Button;
