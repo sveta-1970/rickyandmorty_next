@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Menu from "./Menu";
 import styles from "./Header.module.css";

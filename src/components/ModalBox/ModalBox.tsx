@@ -3,10 +3,10 @@ import Image from "next/image";
 import { req } from "@/components/services/server.request";
 
 import styles from "./ModalBox.module.css";
-import { ICharacter, IEpisode } from '../interfaces/interface';
+import { ICharacter, IEpisode } from "../interfaces/interface";
 
 type ModalProps = {
-  category: string
+  category: string;
   cardInfo: string[];
   onClose: () => void;
 };
@@ -15,7 +15,7 @@ export default function modalBox({ cardInfo, category, onClose }: ModalProps) {
   const [episodeData, setEpisodeData] = useState<IEpisode[]>([]);
   const [characterData, setCharacterData] = useState<ICharacter[]>([]);
 
-  if(category ==="episode"){
+  if (category === "episode") {
     useEffect(() => {
       const fetchEpisodeData = async () => {
         const fetchData = cardInfo.map((url) => req(url));
@@ -24,7 +24,7 @@ export default function modalBox({ cardInfo, category, onClose }: ModalProps) {
       };
       fetchEpisodeData();
     }, [cardInfo]);
-  } else if(category ==="character") {
+  } else if (category === "character") {
     useEffect(() => {
       const fetchCharacterData = async () => {
         const fetchData = cardInfo.map((url) => req(url));
@@ -38,7 +38,7 @@ export default function modalBox({ cardInfo, category, onClose }: ModalProps) {
   const handleClose = () => {
     onClose();
   };
-  
+
   return (
     <div className={styles.modalBox}>
       <div className={styles.modal}>
@@ -79,4 +79,3 @@ export default function modalBox({ cardInfo, category, onClose }: ModalProps) {
     </div>
   );
 }
-
