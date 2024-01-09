@@ -13,7 +13,7 @@ export default async function CharacterName({ params, searchParams }: any) {
     return (
       <div>
         <h1>Character {params.name}</h1>
-        <Cards {...data} />
+        <Cards data={data.results} />
       </div>
     );
   } catch (e) {

@@ -73,29 +73,3 @@ export default function fetchCharacters() {
     </>
   );
 }
-
-/*
-
-export default async function fetchCharacters() {
-  const category: string = "characters";
-  try {
-    const data: IFetchResult = await req(
-      "https://rickandmortyapi.com/api/character"
-    );
-
-    const dataInfo: IDataInfo = data.info;
-    
-    return (
-      <main>
-        <h1>Characters</h1>
-        
-        <Cards {...data} />
-        
-      </main>
-    );
-  } catch (e) {
-    console.error(e);
-  }
-}
-
-*/
