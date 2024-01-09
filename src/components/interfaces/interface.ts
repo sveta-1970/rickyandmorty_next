@@ -19,10 +19,6 @@ export interface ICharacter {
   created: string;
 }
 
-export interface ICharacters {
-  results: ICharacter[];
-}
-
 export interface IEpisode {
   id: number;
   name: string;
@@ -31,10 +27,6 @@ export interface IEpisode {
   characters: string[];
   url: string;
   created: string;
-}
-
-export interface IEpisodes {
-  results: IEpisode[];
 }
 
 export interface ILocation {
@@ -47,16 +39,14 @@ export interface ILocation {
   created: string;
 }
 
-export interface ILocations {
-  results: ILocation[];
+export interface IDataInfo {
+  count: number;
+  pages: number;
+  next: string | null;
+  prev: string | null;
 }
 
 export interface IFetchResult {
-  info: {
-    count: number;
-    pages: number;
-    next: string | null;
-    prev: string | null;
-  };
-  results: ICharacters | IEpisodes | ILocations;
+  info: IDataInfo;
+  results: (ICharacter | IEpisode | ILocation)[];
 }

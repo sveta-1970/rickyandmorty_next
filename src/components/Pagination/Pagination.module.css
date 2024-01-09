@@ -1,0 +1,7 @@
+.paginationContainer{
+  display: flex;
+}
+
+.pagButton{
+  width:20px;
+}

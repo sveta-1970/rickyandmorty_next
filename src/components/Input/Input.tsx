@@ -4,11 +4,10 @@ import React from "react";
 import { useState } from "react";
 import Image from "next/image";
 import image from "../../../public/Icon.svg";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import styles from "./Input.module.css";
 
 const Input = () => {
-  //const searchParams = useSearchParams();
   const pathname = "/characters/";
   const { replace } = useRouter();
   let [searchTerm, setSearchTerm] = useState("");

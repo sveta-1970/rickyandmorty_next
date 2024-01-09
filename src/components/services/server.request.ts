@@ -1,15 +1,17 @@
 "use server";
-import { ICharacters } from "../interfaces/interface";
 
 async function req(url: string, method = "GET") {
   const response = await fetch(url, {
     method,
   });
-  return await response.json();
+  return response.json();
 }
 
 export { req };
 
+
+
+/*
 async function nameReq(name: string, method = "GET") {
   await fetch(`https://rickandmortyapi.com/api/character/?name=${name}`)
     .then((response) => response.json())
@@ -23,3 +25,4 @@ async function nameReq(name: string, method = "GET") {
 }
 
 export { nameReq };
+*/
