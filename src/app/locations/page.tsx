@@ -10,6 +10,7 @@ import { ICharacter, IEpisode, ILocation } from "@/components/interfaces/interfa
 
 export default function fetchLocations() {
   type NextPageUrl = string;
+  type currentPage = number;
   type currentPageUrl = string;
   type PrevPageUrl = string;
   type Pages = number;
@@ -20,6 +21,7 @@ export default function fetchLocations() {
   const [locations, setLocations] = useState<
     (ICharacter | ILocation | IEpisode)[]
   >([]);
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const [currentPageUrl, setCurrentPageUrl] = useState(
     "https://rickandmortyapi.com/api/location"
   );
@@ -43,17 +45,41 @@ export default function fetchLocations() {
 
   function nextPage() {
     if (nextPageUrl) {
+      const nextPageNumber = getNextPageNumber(nextPageUrl);
+      setCurrentPage(nextPageNumber);
       setCurrentPageUrl(nextPageUrl);
     }
   }
 
+  function getNextPageNumber(nextPageUrl: string): number {
+    // Extract the page number from the nextPageUrl
+    const pageNumberMatch = nextPageUrl.match(/page=(\d+)/);
+    if (pageNumberMatch) {
+      return parseInt(pageNumberMatch[1]);
+    }
+    return 0; // Or any default value
+  }
+
   function prevPage() {
     if (prevPageUrl) {
+      const prevPageNumber = getPrevPageNumber(prevPageUrl);
+      setCurrentPage(prevPageNumber);
       setCurrentPageUrl(prevPageUrl);
     }
   }
 
+  function getPrevPageNumber(prevPageUrl: string): number {
+    // Extract the page number from the prevPageUrl
+    const pageNumberMatch = prevPageUrl.match(/page=(\d+)/);
+    if (pageNumberMatch) {
+      console.log(pageNumberMatch[1]);
+      return parseInt(pageNumberMatch[1]);
+    }
+    return 0; // Or any default value
+  }
+
   function goToPage(num: number) {
+    setCurrentPage(num);
     setCurrentPageUrl(`https://rickandmortyapi.com/api/location?page=${num}`);
   }
 
@@ -69,6 +95,7 @@ export default function fetchLocations() {
             prevPage={prevPageUrl ? prevPage : null}
             goToPage={goToPage}
             pages={pages}
+            currentPage={currentPage}
           />
         </main>
       )}
