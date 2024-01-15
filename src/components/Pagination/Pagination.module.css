@@ -13,3 +13,9 @@
   font-weight: 700;
   font-size: 20px;
 }
+
+@media (max-width: 820px) {
+  .paginationContainer{
+    margin: 20px;
+  }
+} 

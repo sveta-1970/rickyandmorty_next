@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { req } from "@/components/services/server.request";
+import Loader from "@/components/Loader/Loader";
 import Pagination from "@/components/Pagination/Pagination";
 import Cards from "@/components/Cards/index";
 import { ICharacter, IEpisode, ILocation } from "@/components/interfaces/interface";
@@ -83,7 +84,7 @@ export default function fetchCharacters() {
 
   return (
     <>
-      {loading && <div>Loading...</div>}
+      {loading && <Loader />}
       {!loading && (
         <main>
           <h1>Characters</h1>

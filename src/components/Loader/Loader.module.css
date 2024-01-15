@@ -1,0 +1,13 @@
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.loadImage {
+  margin: 50px;
+  animation: rotate 5s infinite linear;
+}

@@ -4,7 +4,7 @@
   justify-content: space-evenly;
   gap: 1rem;
   padding: 65px 0;
-}
+} 
 
 .card {
   cursor: pointer;
@@ -19,24 +19,36 @@
     0px 2px 4px;
 }
 
-.image{
+.image {
   border-radius: 4px;
 }
 
-.name{
+.name {
   margin: 10px 5px;
 }
 
-.description{
+.description {
   font-size: 16px;
 }
 
-.button{
+.button {
   padding: 10px 15px;
   margin: 10px 0;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
-  transition: button ease-in-out .4s;
+  transition: button ease-in-out 0.4s;
   box-shadow: rgba(0, 0, 0, 0.2) 2px 7px 10px;
+}
+
+@media (max-width: 820px) {
+  .cards{
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cards{
+    padding: 20px 0;
+  }
 }
