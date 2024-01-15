@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Header.module.css";
@@ -45,7 +45,7 @@ export default function Menu() {
         }
         style={
           isMenuVisible
-            ? { flexDirection: "column", alignItems: "center", gap: "15px" }
+            ? { flexDirection: "column", alignItems: "left", gap: "15px" }
             : undefined
         }
       >
@@ -57,6 +57,7 @@ export default function Menu() {
         <li>
           <Link
             href="/characters"
+            id="characters"
             className={pathname === "/characters" ? styles.active : ""}
           >
             Characters
@@ -65,6 +66,7 @@ export default function Menu() {
         <li>
           <Link
             href="/locations"
+            id="locations"
             className={pathname === "/locations" ? styles.active : ""}
           >
             Locations
@@ -73,6 +75,7 @@ export default function Menu() {
         <li>
           <Link
             href="/episodes"
+            id="episodes"
             className={pathname === "/episodes" ? styles.active : ""}
           >
             Episodes

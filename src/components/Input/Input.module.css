@@ -1,4 +1,4 @@
-.input{
+.input {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   width: 500px;
@@ -7,12 +7,19 @@
   padding-left: 3rem;
 }
 
-.input::placeholder{
-font-size: 14px;
+.input::placeholder {
+  font-size: 14px;
 }
 
-.icon{
+.icon {
   position: relative;
   top: 5px;
   margin-left: 5px;
+}
+
+@media (max-width: 600px) {
+  .input {
+    width: 230px;
+    padding-left: 1rem;
+  }
 }
