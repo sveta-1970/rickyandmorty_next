@@ -1,3 +1,26 @@
+Проєкт відкривається з терміналу за допомогою команди
+npm run dev
+
+Проєкт задеплоєний на платформі Vercel
+https://rickyandmorty-next-jsua.vercel.app
+
+Я інсталювла Cypress
+npm install cypress --save-dev
+
+Далі скачала десктопну версію Cypress, щоб можна було бачити що відбувається в проєкті.
+
+Відкриваю Cypress
+npx cypress open
+
+Один раз запустилося вікно, де потрібно було вибрати тип тесту і початкові налаштування підгрузилися в проєкт. Коли я вдруге відкривала Cypress, видавало помилку, що нібито я вперше користуюсь і була помилка Cypress verification timed out
+
+Я намагалася запустити npx cypress run --spec cypress/e2e/spec.cy.js
+Але також програма довго грузилася і видавало помилку.
+
+Я дописувала в package.json скрипти "cypress:open": "cypress open", "cy:run": " cypress run", але це також не допомогло.
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
