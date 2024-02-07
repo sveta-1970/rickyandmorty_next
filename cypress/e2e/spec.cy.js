@@ -6,7 +6,7 @@ describe("Select test", () =>{
     cy.get("#characters").click();
 
     //Verify that selected results are all shown on the page and they are correct
-    cy.wrap().find(".card").each(($card) => {
+    cy.get(".cards").wrap().find(".card").each(($card) => {
       cy.wrap($card).within(() => {
         cy.get(".name").should("exist");
         cy.get(".image").should("exist");
