@@ -15,7 +15,6 @@ export default function Home() {
           priority
         />
       </div>
-<div></div>
       <Input />
 
       <div className={styles.footer}>
